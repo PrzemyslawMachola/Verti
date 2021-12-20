@@ -1,3 +1,17 @@
+@import "configs/reset";
+@import "configs/variables";
+@import "configs/colors";
+@import "configs/fonts";
+
+//elements
+
+@import "elements/menu";
+@import "elements/logo";
+@import "elements/title";
+@import "elements/articles";
+
+
+
 body {
-  background: green;
+  background-color: $color-background;
 }

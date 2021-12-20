@@ -1,0 +1,122 @@
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+body > header {
+  width: 100%;
+
+  .container {
+    width: 98%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include desktop {
+      flex-direction: row;
+      width: 960px;
+      margin: 10px auto;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      padding: 20px;
+      user-select: none;
+      align-self: flex-start;
+      background: $color-text;
+      opacity: 0.4;
+      border-radius: $default-radius;
+      position: fixed;
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .menu-icon .navicon {
+      background: $color-background;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+    }
+
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+      background: $color-background;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+    }
+
+    .menu-icon .navicon:before {
+      top: 6px;
+    }
+
+    .menu-icon .navicon:after {
+      top: -6px;
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    .menu-btn:checked ~ .menu {
+      max-height: 240px;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+
+
+    .menu {
+      display: none;
+
+      @include desktop {
+        display: flex;
+        a {
+          text-decoration: none;
+          padding: 5px;
+          color: $color-text;
+          @include fontOpen;
+          font-size: 0.9rem;
+          font-weight: 800;
+          border-radius: $default-radius;
+          margin: 15px;
+
+          &:hover {
+            background: $color-text;
+            color: $color-background;
+          }
+        }
+
+      }
+    }
+  }
+}

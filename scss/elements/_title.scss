@@ -1,0 +1,45 @@
+.title {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include fontOpen;
+    background: white;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+    border-radius: $default-radius;
+
+    .verti {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-top: 30px;
+    }
+
+    .verti__description {
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .button {
+      width: 95%;
+      border-radius: $default-radius;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+      padding: 15px;
+      margin-bottom: 15px;
+
+      &__ok {
+        background: $color-primary;
+        color: $color-background;
+      }
+
+      &__more {
+        background: $color-background;
+        color: $color-text;
+      }
+    }
+  }
+}
