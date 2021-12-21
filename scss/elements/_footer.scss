@@ -1,0 +1,30 @@
+.foot {
+  &__container {
+    @include container;
+    background: none;
+    margin: 30px;
+    box-shadow: none;
+
+    .col-3 {
+      border-bottom: 1px solid grey;
+      padding: 30px 0;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding-bottom: 30px;
+  }
+}
+footer {
+  a, .copy, .address {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: $color-text;
+    opacity: 0.5;
+    line-height: 1.6rem;
+
+  }
+}

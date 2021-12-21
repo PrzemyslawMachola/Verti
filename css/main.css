@@ -327,7 +327,6 @@ body > header .container .menu {
   border-radius: 6px;
   align-items: flex-start;
   margin: 30px;
-  border-bottom: 1px solid #444444;
 }
 .container .about__title {
   font-size: 1.1rem;
@@ -367,5 +366,36 @@ body > header .container .menu {
 .stuff__container .stuff__img {
   flex-grow: 1;
   border-radius: 6px;
+}
+
+.foot__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+  border-radius: 6px;
+  background: none;
+  margin: 30px;
+  box-shadow: none;
+}
+.foot__container .col-3 {
+  border-bottom: 1px solid grey;
+  padding: 30px 0;
+}
+.foot__title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+
+footer a, footer .copy, footer .address {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #444444;
+  opacity: 0.5;
+  line-height: 1.6rem;
 }
 /*# sourceMappingURL=main.css.map */
