@@ -1,13 +1,7 @@
 .title {
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include fontOpen;
-    background: white;
-    margin: 10px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
-    border-radius: $default-radius;
+    @include container;
+    padding: 0 15px;
 
     .verti {
       font-size: 2rem;
@@ -19,24 +13,13 @@
       font-size: 1.4rem;
       font-weight: 300;
       text-align: center;
-      margin: 20px 0;
+      margin: 20px 10px;
     }
 
     .button {
-      width: 95%;
-      border-radius: $default-radius;
-      font-size: 1.2rem;
-      font-weight: 800;
-      text-align: center;
-      padding: 15px;
-      margin-bottom: 15px;
+      @include button;
 
-      &__ok {
-        background: $color-primary;
-        color: $color-background;
-      }
-
-      &__more {
+      &__light {
         background: $color-background;
         color: $color-text;
       }

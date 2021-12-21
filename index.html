@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl-PL" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Sass</title>
@@ -27,19 +27,53 @@
     <div class="container">
         <span class="verti">Hi. This is Verti.</span>
         <span class="verti__description">It`s a free responsive site template by HTML5 UP</span>
-        <div class="button button__ok">Ok let`s go</div>
-        <div class="button button__more">More info</div>
+        <div class="button">Ok let`s go</div>
+        <div class="button button__light">More info</div>
     </div>
 </section>
 
-<section class="articles">
-    <article class="info-article"></article>
-    <article class="info-article"></article>
-    <article class="info-article"></article>
+<section class="articles row">
+    <article class="info-article col-4">
+        <img src="assets/pic01.jpg" class="article__img"/>
+        <span class="article__title">First article</span>
+        <span class="article__subtitle">about nothing</span>
+        <p class="article__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </article>
+
+    <article class="info-article col-4">
+        <img src="assets/pic02.jpg" class="article__img"/>
+        <span class="article__title">Second article</span>
+        <span class="article__subtitle">about something</span>
+        <p class="article__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </article>
+
+    <article class="info-article col-4">
+        <img src="assets/pic01.jpg" class="article__img"/>
+        <span class="article__title">Third article</span>
+        <span class="article__subtitle">about everything</span>
+        <p class="article__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </article>
 </section>
 
+<section class="about">
+    <article class="container">
+        <span class="about__title">So what`s this all about?</span>
+        <p class="about__text">This is Verti, a free and fully responsive HTML5 site template by HTML5 UP. Verti is released under the Creative Commons Attribution license, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)</p>
+        <p class="about__text">Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
+        <div class="button">Continue reading</div>
+    </article>
+    <article class="container">
+        <span class="about__title">Interesting stuff</span>
+            <div class="stuff__container">
+                <img src="assets/pic04.jpg" class="stuff__img"/>
+                <img src="assets/pic05.jpg" class="stuff__img"/>
+                <img src="assets/pic06.jpg" class="stuff__img"/>
+                <img src="assets/pic07.jpg" class="stuff__img"/>
+            </div>
+        <div class="button">More</div>
+    </article>
+</section>
 
-</div>
 
 </body>
 </html>

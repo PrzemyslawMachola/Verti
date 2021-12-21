@@ -1,0 +1,33 @@
+//fonts
+
+@mixin fontOpen {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin fontOleo {
+    font-family: 'Oleo Script', cursive;
+}
+
+//elements
+
+@mixin container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+    border-radius: $default-radius;
+}
+
+@mixin button {
+    width: 100%;
+    border-radius: $default-radius;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+    margin: 0 15px 15px 15px;
+    background: $color-primary;
+    color: $color-background;
+}

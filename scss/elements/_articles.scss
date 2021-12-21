@@ -1,4 +1,47 @@
-.info-article {
-  border: 2px solid black;
-  min-height: 300px;
+.row {
+  display: flex;
+  border-radius: $default-radius;
+  flex-wrap: wrap;
+
+
+  .info-article {
+    @include container;
+    align-items: flex-start;
+
+    .article__img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .article__title {
+      font-weight: 800;
+      font-size: 1.3rem;
+      padding: 30px 15px 15px 15px;
+    }
+
+  }
+}
+.article__subtitle,
+.article__text,
+.about__text {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  padding: 0 15px 30px 15px;
+  line-height: 1.6rem;
+}
+
+$columns: 12;
+$column-base-width: 100% / $columns;
+
+[class*='col-'] {
+  min-height: 1px;
+  width: 100%;
+  @include desktop {
+    @for $i from 1 through $columns {
+      .col-#{$i} {
+        width: $column-base-width * $i;
+      }
+    }
+  }
 }

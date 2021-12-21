@@ -48,15 +48,27 @@ input {
   border-radius: 0;
 }
 
+body {
+  background-color: #E4E4E4;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 body > header {
   width: 100%;
 }
 body > header .container {
-  width: 98%;
-  margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: white;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+  border-radius: 6px;
+  background: none;
+  box-shadow: none;
 }
 @media screen and (min-width: 992px) {
   body > header .container {
@@ -188,11 +200,11 @@ body > header .container .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
   background: white;
-  margin: 10px;
+  margin: 15px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
+  padding: 0 15px;
 }
 .title .container .verti {
   font-size: 2rem;
@@ -203,32 +215,157 @@ body > header .container .menu {
   font-size: 1.4rem;
   font-weight: 300;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 .title .container .button {
-  width: 95%;
+  width: 100%;
   border-radius: 6px;
   font-size: 1.2rem;
   font-weight: 800;
   text-align: center;
   padding: 15px;
-  margin-bottom: 15px;
-}
-.title .container .button__ok {
+  margin: 0 15px 15px 15px;
   background: #1691C3;
   color: #E4E4E4;
 }
-.title .container .button__more {
+.title .container .button__light {
   background: #E4E4E4;
   color: #444444;
 }
 
-.info-article {
-  border: 2px solid black;
-  min-height: 300px;
+.row {
+  display: flex;
+  border-radius: 6px;
+  flex-wrap: wrap;
+}
+.row .info-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+  border-radius: 6px;
+  align-items: flex-start;
+}
+.row .info-article .article__img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 6px 6px 0 0;
+}
+.row .info-article .article__title {
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding: 30px 15px 15px 15px;
 }
 
-body {
-  background-color: #E4E4E4;
+.article__subtitle,
+.article__text,
+.about__text {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  padding: 0 15px 30px 15px;
+  line-height: 1.6rem;
+}
+
+[class*=col-] {
+  min-height: 1px;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  [class*=col-] .col-1 {
+    width: 8.3333333333%;
+  }
+  [class*=col-] .col-2 {
+    width: 16.6666666667%;
+  }
+  [class*=col-] .col-3 {
+    width: 25%;
+  }
+  [class*=col-] .col-4 {
+    width: 33.3333333333%;
+  }
+  [class*=col-] .col-5 {
+    width: 41.6666666667%;
+  }
+  [class*=col-] .col-6 {
+    width: 50%;
+  }
+  [class*=col-] .col-7 {
+    width: 58.3333333333%;
+  }
+  [class*=col-] .col-8 {
+    width: 66.6666666667%;
+  }
+  [class*=col-] .col-9 {
+    width: 75%;
+  }
+  [class*=col-] .col-10 {
+    width: 83.3333333333%;
+  }
+  [class*=col-] .col-11 {
+    width: 91.6666666667%;
+  }
+  [class*=col-] .col-12 {
+    width: 100%;
+  }
+}
+
+.about {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+  border-radius: 6px;
+  align-items: flex-start;
+  margin: 30px;
+  border-bottom: 1px solid #444444;
+}
+.container .about__title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 30px 0 15px 0;
+}
+.container .about__text {
+  padding: 0 0 30px 0;
+}
+.container .button {
+  width: 100%;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 15px;
+  margin: 0 15px 15px 15px;
+  background: #1691C3;
+  color: #E4E4E4;
+  align-self: center;
+}
+
+.stuff__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+  border-radius: 6px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.stuff__container .stuff__img {
+  flex-grow: 1;
+  border-radius: 6px;
 }
 /*# sourceMappingURL=main.css.map */

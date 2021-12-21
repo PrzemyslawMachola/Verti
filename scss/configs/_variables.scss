@@ -1,1 +1,13 @@
 $default-radius: 6px;
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
