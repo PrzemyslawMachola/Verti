@@ -228,6 +228,9 @@ body > header .container .menu {
   background: #1691C3;
   color: #E4E4E4;
 }
+.title .container .button__icon {
+  padding: 0 10px;
+}
 .title .container .button__light {
   background: #E4E4E4;
   color: #444444;
@@ -348,6 +351,9 @@ body > header .container .menu {
   color: #E4E4E4;
   align-self: center;
 }
+.container .button__icon {
+  padding: 0 10px;
+}
 
 .stuff__container {
   display: flex;
@@ -389,6 +395,19 @@ body > header .container .menu {
   font-size: 1.1rem;
   font-weight: 800;
   padding-bottom: 30px;
+}
+
+.foot__social {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+.foot__social .foot__icon {
+  font-size: 1.3rem;
+  padding: 7px;
+  color: #E4E4E4;
+  background: #444444;
+  border-radius: 6px;
 }
 
 footer a, footer .copy, footer .address {

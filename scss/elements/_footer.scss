@@ -18,13 +18,28 @@
     padding-bottom: 30px;
   }
 }
-footer {
-  a, .copy, .address {
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: $color-text;
-    opacity: 0.5;
-    line-height: 1.6rem;
+
+.foot__social {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 30px;
+  .foot__icon {
+    font-size: 1.3rem;
+    padding: 7px;
+    color: $color-background;
+    background: $color-text;
+    border-radius: $default-radius;
 
   }
 }
+
+  footer {
+    a, .copy, .address {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: $color-text;
+      opacity: 0.5;
+      line-height: 1.6rem;
+
+    }
+  }
