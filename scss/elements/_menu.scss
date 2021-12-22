@@ -20,7 +20,7 @@ body > header {
       background: $color-text;
       opacity: 0.4;
       border-radius: $default-radius;
-      position: fixed;
+      //position: fixed;
       @include desktop {
         display: none;
       }
@@ -58,8 +58,54 @@ body > header {
       display: none;
     }
 
+
+    .menu {
+      display: none;
+      transition: max-height .5s ease-out;
+
+      @include desktop {
+        display: flex;
+        a {
+          text-decoration: none;
+          padding: 5px;
+          color: $color-text;
+          font-size: 0.9rem;
+          font-weight: 800;
+          border-radius: $default-radius;
+          margin: 15px;
+
+          &:hover {
+            background: $color-text;
+            color: $color-background;
+          }
+        }
+
+      }
+    }
+
     .menu-btn:checked ~ .menu {
-      max-height: 240px;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      border-radius: $default-radius;
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 10px 30px;
+        color: $color-text;
+        font-size: 0.9rem;
+        font-weight: 400;
+        border-radius: $default-radius;
+
+
+        &:hover {
+          background: $color-text;
+          color: $color-background;
+        }
+      }
     }
 
     .menu-btn:checked ~ .menu-icon .navicon {
@@ -80,28 +126,7 @@ body > header {
     }
 
 
-    .menu {
-      display: none;
 
-      @include desktop {
-        display: flex;
-        a {
-          text-decoration: none;
-          padding: 5px;
-          color: $color-text;
-          @include fontOpen;
-          font-size: 0.9rem;
-          font-weight: 800;
-          border-radius: $default-radius;
-          margin: 15px;
 
-          &:hover {
-            background: $color-text;
-            color: $color-background;
-          }
-        }
-
-      }
-    }
   }
 }

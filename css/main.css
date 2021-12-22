@@ -88,7 +88,6 @@ body > header .container .menu-icon {
   background: #444444;
   opacity: 0.4;
   border-radius: 6px;
-  position: fixed;
 }
 @media screen and (min-width: 992px) {
   body > header .container .menu-icon {
@@ -122,8 +121,48 @@ body > header .container .menu-icon .navicon:after {
 body > header .container .menu-btn {
   display: none;
 }
+body > header .container .menu {
+  display: none;
+  transition: max-height 0.5s ease-out;
+}
+@media screen and (min-width: 992px) {
+  body > header .container .menu {
+    display: flex;
+  }
+  body > header .container .menu a {
+    text-decoration: none;
+    padding: 5px;
+    color: #444444;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-radius: 6px;
+    margin: 15px;
+  }
+  body > header .container .menu a:hover {
+    background: #444444;
+    color: #E4E4E4;
+  }
+}
 body > header .container .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 6px;
+}
+body > header .container .menu-btn:checked ~ .menu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #444444;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-radius: 6px;
+}
+body > header .container .menu-btn:checked ~ .menu a:hover {
+  background: #444444;
+  color: #E4E4E4;
 }
 body > header .container .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
@@ -138,28 +177,6 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:bef
 body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-body > header .container .menu {
-  display: none;
-}
-@media screen and (min-width: 992px) {
-  body > header .container .menu {
-    display: flex;
-  }
-  body > header .container .menu a {
-    text-decoration: none;
-    padding: 5px;
-    color: #444444;
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 800;
-    border-radius: 6px;
-    margin: 15px;
-  }
-  body > header .container .menu a:hover {
-    background: #444444;
-    color: #E4E4E4;
-  }
-}
 
 .logo {
   text-decoration: none;
@@ -169,7 +186,6 @@ body > header .container .menu {
   letter-spacing: 0.2rem;
   border-radius: 6px;
   padding: 5px 10px;
-  margin-top: 45px;
   font-family: "Oleo Script", cursive;
 }
 @media screen and (min-width: 768px) {
