@@ -59,7 +59,6 @@ $column-base-width: math.div(100%, $columns);
   @for $i from 1 through $columns {
     .col-#{$i} {
       width: calc($column-base-width * $i - 1rem);
-      //flex: 0 0 calc($column-base-width * $i);
     }
   }
 }
