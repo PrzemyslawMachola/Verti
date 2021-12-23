@@ -327,6 +327,7 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   color: #E4E4E4;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 .title .container .buttons .button__icon {
   padding: 0 10px;
@@ -571,7 +572,7 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
   background: none;
-  margin: 30px;
+  margin: 32px;
   box-shadow: none;
 }
 @media screen and (min-width: 768px) {
@@ -585,9 +586,38 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
     margin: 10px auto;
   }
 }
-.foot__container .col-3 {
-  border-bottom: 1px solid grey;
-  padding: 30px 0;
+@media screen and (min-width: 768px) {
+  .foot__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+}
+.foot__container .foot__box {
+  width: 100%;
+  margin: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .foot__container .foot__box {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .foot__container .foot__box {
+    width: 25%;
+  }
+}
+.foot__container .line {
+  width: 100%;
+  height: 1px;
+  background: #444444;
+  opacity: 0.3;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .foot__container .line {
+    display: none;
+  }
 }
 .foot__title {
   display: block;
@@ -615,5 +645,37 @@ footer a, footer .copy, footer .address {
   color: #444444;
   opacity: 0.5;
   line-height: 1.6rem;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+  border-radius: 6px;
+  background: none;
+  margin: 32px;
+  box-shadow: none;
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .copyright {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .copyright {
+    width: 960px;
+    margin: 10px auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .copyright {
+    flex-direction: row;
+    padding: 16px;
+    justify-content: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
