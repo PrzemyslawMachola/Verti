@@ -1,12 +1,30 @@
+@use "sass:math";
+
+.articles {
+  @include container;
+    background: none;
+    flex-direction: row;
+    box-shadow: none;
+    justify-content: space-between;
+
+}
+
 .row {
+  //width: 100%;
   display: flex;
   border-radius: $default-radius;
   flex-wrap: wrap;
-
+  box-sizing: border-box;
 
   .info-article {
-    @include container;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
+    border-radius: $default-radius;
     align-items: flex-start;
+
 
     .article__img {
       width: 100%;
@@ -19,7 +37,6 @@
       font-size: 1.3rem;
       padding: 30px 15px 15px 15px;
     }
-
   }
 }
 .article__subtitle,
@@ -32,16 +49,17 @@
 }
 
 $columns: 12;
-$column-base-width: 100% / $columns;
+$column-base-width: math.div(100%, $columns);
 
-[class*='col-'] {
+[class^='col-'] {
   min-height: 1px;
   width: 100%;
-  @include desktop {
-    @for $i from 1 through $columns {
-      .col-#{$i} {
-        width: $column-base-width * $i;
-      }
+}
+@include desktop {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: calc($column-base-width * $i - 1rem);
+      //flex: 0 0 calc($column-base-width * $i);
     }
   }
 }
