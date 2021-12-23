@@ -64,17 +64,26 @@ body > header .container {
   flex-direction: column;
   align-items: center;
   background: white;
-  margin: 15px;
+  margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
   background: none;
   box-shadow: none;
 }
+@media screen and (min-width: 768px) {
+  body > header .container {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  body > header .container {
+    width: 960px;
+    margin: 10px auto;
+  }
+}
 @media screen and (min-width: 992px) {
   body > header .container {
     flex-direction: row;
-    width: 960px;
-    margin: 10px auto;
   }
 }
 body > header .container .menu-icon {
@@ -217,37 +226,118 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   flex-direction: column;
   align-items: center;
   background: white;
-  margin: 15px;
+  margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
-  padding: 0 15px;
+  padding: 1rem;
+  font-size: 1rem;
 }
-.title .container .verti {
-  font-size: 2rem;
+@media screen and (min-width: 768px) {
+  .title .container {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title .container {
+    width: 960px;
+    margin: 10px auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .title .container {
+    font-size: 1.5rem;
+  }
+}
+.title .container .title__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media screen and (min-width: 992px) {
+  .title .container .title__box {
+    flex-direction: row;
+  }
+}
+.title .container .title__box .title_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .title .container .title__box .title_text {
+    padding: 1em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title .container .title__box .title_text {
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.title .container .title__box .title_text .verti {
+  font-size: 2em;
   font-weight: 800;
-  margin-top: 30px;
+  margin-top: 1rem;
 }
-.title .container .verti__description {
-  font-size: 1.4rem;
+@media screen and (min-width: 992px) {
+  .title .container .title__box .title_text .verti {
+    margin: 0;
+  }
+}
+.title .container .title__box .title_text .verti__description {
+  font-size: 1.4em;
   font-weight: 300;
+  margin-top: 1rem;
   text-align: center;
-  margin: 20px 10px;
+  line-height: 2.5rem;
 }
-.title .container .button {
+@media screen and (min-width: 992px) {
+  .title .container .title__box .title_text .verti__description {
+    margin: 0;
+    text-align: left;
+  }
+}
+.title .container .buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media screen and (min-width: 768px) {
+  .title .container .buttons {
+    padding: 1em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title .container .buttons {
+    width: 450px;
+    justify-content: space-between;
+  }
+}
+.title .container .buttons .button {
   width: 100%;
   border-radius: 6px;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 800;
   text-align: center;
-  padding: 15px;
-  margin: 0 15px 15px 15px;
+  padding: 16px;
   background: #1691C3;
   color: #E4E4E4;
+  display: flex;
+  justify-content: center;
 }
-.title .container .button__icon {
+.title .container .buttons .button__icon {
   padding: 0 10px;
 }
-.title .container .button__light {
+@media screen and (min-width: 992px) {
+  .title .container .buttons .button {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+.title .container .buttons .button__light {
   background: #E4E4E4;
   color: #444444;
 }
@@ -262,10 +352,21 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   flex-direction: column;
   align-items: center;
   background: white;
-  margin: 15px;
+  margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
   align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .row .info-article {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .row .info-article {
+    width: 960px;
+    margin: 10px auto;
+  }
 }
 .row .info-article .article__img {
   width: 100%;
@@ -341,11 +442,22 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   flex-direction: column;
   align-items: center;
   background: white;
-  margin: 15px;
+  margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
   align-items: flex-start;
   margin: 30px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+    margin: 10px auto;
+  }
 }
 .container .about__title {
   font-size: 1.1rem;
@@ -358,13 +470,14 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
 .container .button {
   width: 100%;
   border-radius: 6px;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 800;
   text-align: center;
-  padding: 15px;
-  margin: 0 15px 15px 15px;
+  padding: 16px;
   background: #1691C3;
   color: #E4E4E4;
+  display: flex;
+  justify-content: center;
   align-self: center;
 }
 .container .button__icon {
@@ -376,7 +489,7 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   flex-direction: column;
   align-items: center;
   background: white;
-  margin: 15px;
+  margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
   margin: 30px 0;
@@ -384,6 +497,17 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .stuff__container {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .stuff__container {
+    width: 960px;
+    margin: 10px auto;
+  }
 }
 .stuff__container .stuff__img {
   flex-grow: 1;
@@ -395,12 +519,23 @@ body > header .container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:aft
   flex-direction: column;
   align-items: center;
   background: white;
-  margin: 15px;
+  margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0;
   border-radius: 6px;
   background: none;
   margin: 30px;
   box-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .foot__container {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .foot__container {
+    width: 960px;
+    margin: 10px auto;
+  }
 }
 .foot__container .col-3 {
   border-bottom: 1px solid grey;
